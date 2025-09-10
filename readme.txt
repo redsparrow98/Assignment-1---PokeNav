@@ -6,6 +6,8 @@ Task 1: Creating the PokéNav Menu
 Task 2: Identify Hashtags
 
 
+
+
 Task 3: Detect a Palindrome
 
 
