@@ -63,3 +63,4 @@ while game_on:
         print("Match zodiac sign and elements")
     elif option == 7:
         print("BMI calculator")
+
