@@ -89,10 +89,47 @@ Task 7: Implement Body Mass Index (BMI) Based on Height and Weight
 
 =========================================================================================================
 
-task 8:
+task 8: Fitness and Health Tracking
+*Nat
+
+I found this task challenging as I kept getting stuck on different parts and had to do a lot of googling
+and finding new concepts which i hope we were actually meant/allowed to use.
+
+how to cast each element in a list to a different type i found the function map()
+https://www.w3schools.com/python/ref_func_map.asp
+
+
+Finding the most and least active day was fine but then i got stuck on how to print only the last day in
+case of multiple same entires.
+
+my solution:
+-I create a weekdays list with same order of days as the input of steps list.
+-I initialized the most_active_day_index variable 
+-Then i decided on suing the for loop to iterate through the steps list in the range of the amount of items 
+in the list (6)
+-Each time I found a value equal to the max_steps I updated most_active_day_index to be the iterating index
+-This meant that if there is a same max_steps value at the end of the steps list it will update the
+most_active_day_index to the last appearance of the max_steps value.
+-Finally, I created most_active_day by selecting the weekday list element (weekday string) corresponding to 
+most_active_day_index which was used in the final print output
+
+same was applied to the least solution.
+
 
 =========================================================================================================
 
 task 9: 
+
+Task 1: Menu error Nat/Harshani ✅
+
+Task 2: No hashtags found error Nat ✅
+
+Task 5: Invalid type Nat ✅
+
+task 6: Invalid month index 
+
+task 7: missing inputs 
+
+task 8: Invalid input Nat ✅
 
 =========================================================================================================

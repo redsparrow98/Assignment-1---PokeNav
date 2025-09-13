@@ -12,6 +12,7 @@ Welcome to the Main Menu. Choose one of the options below:
 5. Get Pokemon traits
 6. Match zodiac sign and element
 7. BMI calculator 
+8. Fitness and Health Tracking
 """
     
     print(menu)
@@ -38,9 +39,12 @@ def identify_hashtags():
             if char == "#" and word not in hashtag_list:
                 hashtag_list.append(word)
     
-    print("Hashtags found:")
-    for i in hashtag_list:
-        print(i)
+    if len(hashtag_list) == 0:
+        print("No hashtags found.")
+    else:
+        print("Hashtags found:")
+        for i in hashtag_list:
+            print(i)
 
 def detect_palindrome():
     """ 
@@ -77,8 +81,10 @@ def get_pokemon_traits():
         print(f"{name} is a {type}-type Pokemon! It is strong against Grass-type Pokemons and weak against Water-type Pokemons.")
     elif type == "Water":
         print(f"{name} is a {type}-type Pokemon! It is strong against Fire-type Pokemons and weak against Grass-type Pokemons.")
-    else:
+    elif type == "Grass":
         print(f"{name} is a {type}-type Pokemon! It is strong against Water-type Pokemons and weak against Fire-type Pokemons.")
+    else:
+        print("Error - The Pokemon type provided is not valid. Valid types: Water, Fire, Grass.")
 
 def find_zodiac_and_eeveelution():
     """ 
@@ -107,6 +113,43 @@ def find_zodiac_and_eeveelution():
         print("Element: Air")
         print("Eeveelution: Jolteon")
 
+def fitness_and_health_tracking():
+    steps_input = input("Step count per day: ")
+    steps_list = list(map(int, steps_input.split(",")))
+
+    if len(steps_list) != 7:
+        print(f"Error - Invalid input. The program needs 7 numbers; you typed {len(steps)} numbers.")
+    else:
+        # Calculating the average and standard deviation of the population
+        average_steps = sum(steps_list) / len(steps_list)
+
+        squared_diff = []
+        for i in steps_list:
+            squared_diff.append((i - average_steps) ** 2)
+        std_steps = math.sqrt(sum(squared_diff) / len(steps_list))
+
+
+        # Checking the least and most active days
+        weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+        max_steps = max(steps_list)
+        most_active_day_index = -1
+        for index in range(len(steps_list)):
+            if steps_list[index] == max_steps:
+                most_active_day_index = index
+        most_active_day = weekdays[most_active_day_index]
+
+        min_steps = min(steps_list)
+        least_active_day_index = -1
+        for index in range(len(steps_list)):
+            if steps_list[index] == min_steps:
+                least_active_day_index = index
+        least_active_day = weekdays[least_active_day_index]
+
+
+        print(f"Steps Statistics: {average_steps:.2f} + / - {std_steps:.2f} per day.")
+        print(f"Most active day: {most_active_day}. Least active day: {least_active_day}.")
+
 
 game_on = True
 
@@ -128,4 +171,8 @@ while game_on:
         find_zodiac_and_eeveelution()
     elif option == 7:
         print("BMI calculator")
+    elif option == 8:
+        fitness_and_health_tracking()
+    else:
+        print("Error - Invalid option. Please input a number between 1 and 8.")
 
