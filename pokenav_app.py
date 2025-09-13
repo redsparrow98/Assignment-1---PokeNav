@@ -80,6 +80,33 @@ def get_pokemon_traits():
     else:
         print(f"{name} is a {type}-type Pokemon! It is strong against Water-type Pokemons and weak against Fire-type Pokemons.")
 
+def find_zodiac_and_eeveelution():
+    """ 
+    Ask the user for birth_month.
+    Print the zodiac corresponding to the birth_month.
+    print the element and eeveelution corresponding to the zodiac.
+
+    """
+    zodiac_sign = ["Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius"]
+
+    birth_month = (int(input("Type your birth month: "))) - 1
+
+    zodiac = (zodiac_sign[birth_month])
+    print(f"Zodiac sign: {zodiac}")
+
+    if zodiac == "Cancer" or zodiac == "Scorpio" or zodiac == "Pisces":
+        print("Element: Water")
+        print("Eeveelution: Vaporeon")
+    elif zodiac == "Aries" or zodiac == "Leo" or zodiac == "Sagittarius":
+        print("Element: Fire")
+        print("Eeveelution: Flareon")
+    elif zodiac == "Taurus" or zodiac == "Virgo" or zodiac == "Capricorn":
+        print("Element: Earth")
+        print("Eeveelution: Leafeon")
+    elif zodiac == "Gemini" or zodiac == "Libra" or zodiac == "Aquarius":
+        print("Element: Air")
+        print("Eeveelution: Jolteon")
+
 
 game_on = True
 
@@ -98,7 +125,7 @@ while game_on:
     elif option == 5:
         get_pokemon_traits()
     elif option == 6:
-        print("Match zodiac sign and elements")
+        find_zodiac_and_eeveelution()
     elif option == 7:
         print("BMI calculator")
 
