@@ -42,6 +42,23 @@ def identify_hashtags():
     for i in hashtag_list:
         print(i)
 
+def detect_palindrome():
+    """ 
+    Ask the user for Pokemon name 
+    Reverse the name to check if it is a palindrome.
+
+    """
+    name = input("Type your Pokemon name: ")
+    reversed_name = ""
+
+    for i in name:
+        reversed_name = i + reversed_name
+
+    if name.lower() == reversed_name.lower():
+        print(f"The name ‘{name}’ is a palindrome.")
+    else:
+        print(f"The name ‘{name}’ is not a palindrome.")
+
 def get_pokemon_traits():
     """
     Ask the user for a Pokemon name and type, then print a message
@@ -75,7 +92,7 @@ while game_on:
     elif option == 2:
         identify_hashtags()
     elif option == 3:
-        print("Detect a palindrome")
+        detect_palindrome()
     elif option == 4:
         print("Create an acronym")
     elif option == 5:
