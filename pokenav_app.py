@@ -113,7 +113,7 @@ def find_zodiac_and_eeveelution():
         print("Element: Air")
         print("Eeveelution: Jolteon")
 
-def fitness_and_health_tracking():
+def tracking_fitness_and_health():
     steps_input = input("Step count per day: ")
     steps_list = list(map(int, steps_input.split(",")))
 
@@ -172,7 +172,7 @@ while game_on:
     elif option == 7:
         print("BMI calculator")
     elif option == 8:
-        fitness_and_health_tracking()
+        tracking_fitness_and_health()
     else:
         print("Error - Invalid option. Please input a number between 1 and 8.")
 
