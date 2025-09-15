@@ -118,7 +118,7 @@ def tracking_fitness_and_health():
     steps_list = list(map(int, steps_input.split(",")))
 
     if len(steps_list) != 7:
-        print(f"Error - Invalid input. The program needs 7 numbers; you typed {len(steps)} numbers.")
+        print(f"Error - Invalid input. The program needs 7 numbers; you typed {len(steps_list)} numbers.")
     else:
         # Calculating the average and standard deviation of the population
         average_steps = sum(steps_list) / len(steps_list)
