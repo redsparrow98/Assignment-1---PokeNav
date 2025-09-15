@@ -51,7 +51,7 @@ Task 3: Detect a Palindrome
 =========================================================================================================
 
 Task 4: Create an Acronym
-*Tharaka
+*Sayara
 
 =========================================================================================================
 
@@ -85,7 +85,7 @@ Task 6: Zodiac Sign and Eeveelution
 =========================================================================================================
 
 Task 7: Implement Body Mass Index (BMI) Based on Height and Weight
-*Tharaka
+*Sayara
 
 =========================================================================================================
 
@@ -93,14 +93,18 @@ task 8: Fitness and Health Tracking
 *Nat
 
 I found this task challenging as I kept getting stuck on different parts and had to do a lot of googling
-and finding new concepts which i hope we were actually meant/allowed to use.
+After the functions lecture we had I decided to break this problem into multiple functions to 
+avoid blob code since originally i had the whole function rack_fitness_and_health() check and do multiple things
 
-how to cast each element in a list to a different type i found the function map()
-https://www.w3schools.com/python/ref_func_map.asp
+I believe that each function is self contained and can be reused:
+calculate_average()
+calculate_standard_deviation()
+check_most_active_day()
+check_least_active_day()
+rack_fitness_and_health()
 
-
-Finding the most and least active day was fine but then i got stuck on how to print only the last day in
-case of multiple same entires.
+WHts i struggled the most with was how to on how to print only the last most/ least active day in case of 
+multiple same entires.
 
 my solution:
 -I create a weekdays list with same order of days as the input of steps list.
@@ -114,6 +118,11 @@ most_active_day_index to the last appearance of the max_steps value.
 most_active_day_index which was used in the final print output
 
 same was applied to the least solution.
+
+Concepts used:
+-variables      -for loops                  -functions
+-input          -lists                      -conditionals
+-printing       -string manipulation
 
 
 =========================================================================================================

@@ -19,19 +19,18 @@ Welcome to the Main Menu. Choose one of the options below:
     option = int(input("Type your option: "))
     return option
 
-def identify_hashtags():
+def identify_hashtags(post_str):
     """
-    Ask the user to enter a post, extract words that contain a hashtag (#),
-    and print the unique hashtags found.
+    Take a post parameter and extract words that contain a hashtag (#),
+    and if # is found print the unique hashtags, if no # found print no hashtags found.
 
     Steps:
-        1. Read user input and split() it into list of words.
+        1. create a word_list from the post parameter by splitting the string.
         2. Check each word for the '#' character.
         3. Add the word to a hashtag list if not already included.
         4. Print all hashtags found.
     """
-    post = input("Type your post: ")
-    words_list = post.split()
+    words_list = post_str.split()
 
     hashtag_list = []
     for word in words_list:
@@ -63,19 +62,15 @@ def detect_palindrome():
     else:
         print(f"The name ‘{name}’ is not a palindrome.")
 
-def get_pokemon_traits():
+def get_pokemon_traits(name, type):
     """
-    Ask the user for a Pokemon name and type, then print a message
-    showing its strengths and weaknesses against each type.
+    Take Pokemon name and type parameters, then print a message showing its strengths and weaknesses against each type.
 
     Rules:
         - Fire is strong against Grass, weak against Water.
         - Water is strong against Fire, weak against Grass.
         - Grass is strong against Water, weak against Fire.
     """
-
-    name = input("Type your Pokemon name: ")
-    type = input("Type your Pokemon type: ").capitalize()
 
     if type == "Fire":
         print(f"{name} is a {type}-type Pokemon! It is strong against Grass-type Pokemons and weak against Water-type Pokemons.")
@@ -113,66 +108,140 @@ def find_zodiac_and_eeveelution():
         print("Element: Air")
         print("Eeveelution: Jolteon")
 
-def tracking_fitness_and_health():
-    steps_input = input("Step count per day: ")
-    steps_list = list(map(int, steps_input.split(",")))
+def calculate_average(integer_list):
+    """
+    Calculates the average of any list of integers
+    and return than average.
+    """
+    list = integer_list
+    average = sum(list) / len(list)
+
+    return average
+
+def calculate_standard_deviation(integer_lis, average):
+    """
+    calculates the population standard deviation of a list of integers.
+
+    required parameters:
+        integer_list (list of integers) - which will be the data set for calculation
+        average - needs to be the mean of the data set (integer_list)
+
+    returns std_deviation, a single float value representing the population standard deviation.
+    """
+    squared_diff = []
+    for i in integer_lis:
+        squared_diff.append((i - average) ** 2)
+    std_deviation = math.sqrt(sum(squared_diff) / len(integer_lis))
+    return std_deviation
+
+def check_most_active_day(integer_list):
+    """
+    -It keeps a list of weekdays that matches each index of the users step input.
+    -It finds the largest number in the step list.
+    -It loops through the list to compare each value with that largest number.
+    -When it finds a match, it updates the most_active_day_index. If there are multiple matches, the index of the last match is kept.
+    -It uses that index to get the weekday from the weekday list.
+
+    required parameter:
+        integer_list (list pf integers)
+
+    It returns the weekday string as the most active day.
+    """
+    weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+    max_steps = max(integer_list)
+    most_active_day_index = -1
+    for index in range(len(integer_list)):
+        if integer_list[index] == max_steps:
+            most_active_day_index = index
+    most_active_day = weekdays[most_active_day_index]
+    return most_active_day
+
+def check_least_active_day(integer_list):
+    """
+    -It keeps a list of weekdays that matches each index of the users step input.
+    -It finds the smallest number in the integer_list.
+    -It loops through the list to compare each value with that smallest number.
+    -When it finds a match, it updates the least_active_day_index. If there are multiple matches, the index of the last match is kept.
+    -It uses that index to get the weekday from the weekday list.
+    -It returns the weekday as the least active day.
+
+    required parameter:
+        integer_list (list pf integers)
+
+    It returns the weekday string as the least active day.
+    """
+
+    weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    
+    min_steps = min(integer_list)
+    least_active_day_index = -1
+    for index in range(len(integer_list)):
+        if integer_list[index] == min_steps:
+            least_active_day_index = index
+    least_active_day = weekdays[least_active_day_index]
+    return least_active_day
+
+def track_fitness_and_health(steps):
+    """
+    The function tracking_fitness_and_health(steps) processes a users weekly step counts and prints fitness statistics.
+    It takes the input steps as a string of numbers separated by commas.
+    It splits the string and converts each number into an integer so calculations can be done.
+    It checks if the user entered exactly 7 numbers (one for each day of the week). If not, it prints an error message.
+    
+    If the input is valid:
+    It calculates the average daily steps.
+    It calculates the standard deviation of the steps.
+    It finds the most active day (highest steps).
+    It finds the least active day (lowest steps).
+
+    Finally, it prints the average with standard deviation, and shows which day was most active and least active.
+    """
+    # Create a list of steps of type integer so we can do calculations.
+    steps_list = steps.split(",")
+    steps_list_integers = []
+    for x in steps_list:
+        type_cast = int(x)
+        steps_list_integers.append(type_cast)
 
     if len(steps_list) != 7:
-        print(f"Error - Invalid input. The program needs 7 numbers; you typed {len(steps_list)} numbers.")
+        print(f"Error - Invalid input. The program needs 7 numbers; you typed {len(steps_list_integers)} numbers.")
     else:
-        # Calculating the average and standard deviation of the population
-        average_steps = sum(steps_list) / len(steps_list)
+        average = calculate_average(steps_list_integers)
+        std_steps = calculate_standard_deviation(steps_list_integers, average)
+        
+        most_active_day = check_most_active_day(steps_list_integers)
+        least_active_day = check_least_active_day(steps_list_integers)
 
-        squared_diff = []
-        for i in steps_list:
-            squared_diff.append((i - average_steps) ** 2)
-        std_steps = math.sqrt(sum(squared_diff) / len(steps_list))
-
-
-        # Checking the least and most active days
-        weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-
-        max_steps = max(steps_list)
-        most_active_day_index = -1
-        for index in range(len(steps_list)):
-            if steps_list[index] == max_steps:
-                most_active_day_index = index
-        most_active_day = weekdays[most_active_day_index]
-
-        min_steps = min(steps_list)
-        least_active_day_index = -1
-        for index in range(len(steps_list)):
-            if steps_list[index] == min_steps:
-                least_active_day_index = index
-        least_active_day = weekdays[least_active_day_index]
-
-
-        print(f"Steps Statistics: {average_steps:.2f} + / - {std_steps:.2f} per day.")
+        print(f"Steps Statistics: {average:.2f} + / - {std_steps:.2f} per day.")
         print(f"Most active day: {most_active_day}. Least active day: {least_active_day}.")
 
 
-game_on = True
+option = 0
 
-while game_on:
+while option != 1:
     option = menu_screen()
 
     if option == 1:
         print("Thank you for playing! See you next time!")
-        game_on = False
     elif option == 2:
-        identify_hashtags()
+        post = input("Type your post: ")
+        identify_hashtags(post)
     elif option == 3:
         detect_palindrome()
     elif option == 4:
         print("Create an acronym")
     elif option == 5:
-        get_pokemon_traits()
+        name = input("Type your Pokemon name: ")
+        type = input("Type your Pokemon type: ").capitalize()
+        get_pokemon_traits(name, type)
     elif option == 6:
         find_zodiac_and_eeveelution()
     elif option == 7:
         print("BMI calculator")
     elif option == 8:
-        tracking_fitness_and_health()
+        steps_input = input("Step count per day: ")
+        track_fitness_and_health(steps_input)
     else:
         print("Error - Invalid option. Please input a number between 1 and 8.")
 
