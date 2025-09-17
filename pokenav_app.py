@@ -21,11 +21,13 @@ Welcome to the Main Menu. Choose one of the options below:
 
 def identify_hashtags():
     """
-    Take a post parameter and extract words that contain a hashtag (#),
+    Reads user input for a post.
+    Extracts words that contain a hashtag (#),
     and if # is found print the unique hashtags, if no # found print no hashtags found.
 
     Steps:
-        1. create a word_list from the post parameter by splitting the string.
+        1. Read user input for the post
+        1. create a word_list from the post by splitting the string.
         2. Check each word for the '#' character.
         3. Add the word to a hashtag list if not already included.
         4. Print all hashtags found.
@@ -65,7 +67,8 @@ def detect_palindrome():
 
 def get_pokemon_traits():
     """
-    Take Pokemon name and type parameters, then print a message showing its strengths and weaknesses against each type.
+    Reads Pokemon name and type user input,
+    Then prints a message showing its strengths and weaknesses against each type.
 
     Rules:
         - Fire is strong against Grass, weak against Water.
@@ -169,87 +172,58 @@ def calculate_standard_deviation(integer_lis, average):
     std_deviation = math.sqrt(get_sum(squared_diff) / len(integer_lis))
     return std_deviation
 
-#
-def check_most_active_day(integer_list):
-    """
-    -It keeps a list of weekdays that matches each index of the users step input.
-    -It finds the largest number in the step list.
-    -It loops through the list to compare each value with that largest number.
-    -When it finds a match, it updates the most_active_day_index. If there are multiple matches, the index of the last match is kept.
-    -It uses that index to get the weekday from the weekday list.
-
-    required parameter:
-        integer_list (list pf integers)
-
-    It returns the weekday string as the most active day.
-    """
-    weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-
-    max_steps = get_max_value(integer_list)
-    most_active_day_index = None
-
-    for i in range(len(integer_list)):
-        if integer_list[i] == max_steps:
-            most_active_day_index = i
-    most_active_day = weekdays[most_active_day_index]
-    return most_active_day
-
-def check_least_active_day(integer_list):
-    """
-    -It keeps a list of weekdays that matches each index of the users step input.
-    -It finds the smallest number in the integer_list.
-    -It loops through the list to compare each value with that smallest number.
-    -When it finds a match, it updates the least_active_day_index. If there are multiple matches, the index of the last match is kept.
-    -It uses that index to get the weekday from the weekday list.
-    -It returns the weekday as the least active day.
-
-    required parameter:
-        integer_list (list pf integers)
-
-    It returns the weekday string as the least active day.
-    """
-
-    weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    
-    min_steps = get_min_value(integer_list)
-    least_active_day_index = None
-
-    for i in range(len(integer_list)):
-        if integer_list[i] == min_steps:
-            least_active_day_index = i
-    least_active_day = weekdays[least_active_day_index]
-    return least_active_day
-
-def track_fitness_and_health(steps):
+def track_fitness_and_health():
     """
     The function tracking_fitness_and_health(steps) processes a users weekly step counts and prints fitness statistics.
-    It takes the input steps as a string of numbers separated by commas.
-    It splits the string and converts each number into an integer so calculations can be done.
-    It checks if the user entered exactly 7 numbers (one for each day of the week). If not, it prints an error message.
+    Readds user input representing steps as a string of numbers separated by commas.
+    Splits the string and converts each number into an integer so calculations can be done.
+    Checks if the user entered exactly 7 numbers (one for each day of the week). If not, it prints an error message.
     
     If the input is valid:
     It calculates the average daily steps.
     It calculates the standard deviation of the steps.
     It finds the most active day (highest steps).
     It finds the least active day (lowest steps).
+    In case there are ties between the most and least active day, prints the last day in the week to have the same value.
+
 
     Finally, it prints the average with standard deviation, and shows which day was most active and least active.
     """
+    steps_input = input("Step count per day: ")
+    
     # Create a list of steps of type integer so we can do calculations.
-    steps_list = steps.split(",")
+    steps_list = steps_input.split(",")
     steps_list_integers = []
     for x in steps_list:
         type_cast = int(x)
         steps_list_integers.append(type_cast)
 
     if len(steps_list) != 7:
-        print(f"Error - Invalid input. The program needs 7 numbers; you typed {len(steps_list_integers)} numbers.")
+        print(f"Error - Invalid input. The program needs 7 numbers; you typed {len(steps_list)} numbers.")
     else:
+        # calculate average and standard deviation
         average = calculate_average(steps_list_integers)
         std_steps = calculate_standard_deviation(steps_list_integers, average)
         
-        most_active_day = check_most_active_day(steps_list_integers)
-        least_active_day = check_least_active_day(steps_list_integers)
+
+        # find the most active day 
+        weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+        max_steps = get_max_value(steps_list_integers)
+        most_active_day_index = None
+        for i in range(len(steps_list_integers)):
+            if steps_list_integers[i] == max_steps:
+                most_active_day_index = i
+        most_active_day = weekdays[most_active_day_index]
+
+
+        # find the least active day
+        min_steps = get_min_value(steps_list_integers)
+        least_active_day_index = None
+        for i in range(len(steps_list_integers)):
+            if steps_list_integers[i] == min_steps:
+                least_active_day_index = i
+        least_active_day = weekdays[least_active_day_index]
 
         print(f"Steps Statistics: {average:.2f} + / - {std_steps:.2f} per day.")
         print(f"Most active day: {most_active_day}. Least active day: {least_active_day}.")
@@ -275,7 +249,6 @@ while option != 1:
     elif option == 7:
         print("BMI calculator")
     elif option == 8:
-        steps_input = input("Step count per day: ")
-        track_fitness_and_health(steps_input)
+        track_fitness_and_health()
     else:
         print("Error - Invalid option. Please input a number between 1 and 8.")

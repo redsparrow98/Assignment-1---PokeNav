@@ -1,5 +1,5 @@
-* We used Git/GitHub version control while working on this assignment to make independent and separated
-team work possible.
+* We used Git/GitHub version control while working on this assignment to make independent work also 
+possible
 
 below is the requested explanation on how we separated the tasks and on which ones we worked together
 
@@ -25,17 +25,17 @@ Task 2: Identify Hashtags
 *Nat
 
 I completed this task by creating a function to detect the # in a post.
+
 explanation of the function:
 - Reads user post input and creates a words_list by splitting each word in the post.
 - Declares an empty list for storing the hashtags.
 - Uses a nested for loop to iterate trough all the words in the words_list and then to iterate trough
   each character in that word.
-- while iterating trough the character in each word checks if any character is # AND if it does match 
-  also check that word is not already in the hashtags_list if both are true the words gets appended to the list.
-- Prints the items in the list
-
-The reason why I used a function is for code readability and ease of updating and maintaining
-each aspect of the of the program in the future.
+- while iterating trough the character in each word checks if character is a # AND if it does match 
+  check that word is not already in the hashtags_list if both are true the words gets appended to the list.
+- As part of error handling if checks the length of the hashtag_list and if its 0 (meaning empty) it prints
+  "No hashtags found."
+- If the list is not empty then it prints the items in the list
 
 
 Concepts used:
@@ -59,14 +59,16 @@ Task 5: Get Pokémon Traits
 *Nat
 
 Created another function for this module of the program.
-The function asks for name of the Pokemon and the type of the pokemon, I decided to capitalize the type
-input due to the assignment specifications stating that this input is case sensitive and i wanted to ensure
-to avoid any errors in case input is not capitalized.
+Description of the function:
+- The function asks for name of the Pokemon and the type of the pokemon, I decided to capitalize the type
+  input due to the assignment specifications stating that this input is case sensitive and i wanted to ensure
+  to avoid any errors in case input is not capitalized.
+- Then the function runs a conditional to check for the users type input and based on the user type it prints 
+  output to the user to show them the weaknesses and strengths against other types f Pokemons
+- As part of error handling if the user inputted type doesn't match any of the criteria it prints an error 
+  message and returns to main menu.
 
-I then created a conditional to check for the users type input and based on that i created a print output
-to the user to show them the weaknesses and strengths against other types f Pokemons
-
-I used below given guide on the the Types.
+type strength rules:
 # Fire-types are weak against Water-types and strong against Grass-types
 # Water-types are weak against Grass-types and strong against Fire-types
 # Grass-types are weak against Fire-types and strong against Water-types
@@ -92,23 +94,32 @@ Task 7: Implement Body Mass Index (BMI) Based on Height and Weight
 task 8: Fitness and Health Tracking
 *Nat
 
-I found this task challenging as I kept getting stuck on different parts and had to do a lot of googling
-After the functions lecture we had I decided to break this problem into multiple functions to 
-avoid blob code since originally i had the whole function rack_fitness_and_health() check and do multiple things
-
-I believe that each function is self contained and can be reused:
+Functions created because we are told we are not allowed to use the built in sum(), min(), max(), mean():
 calculate_average()
 get_sum()
 get_max_value()
 get_min_value()
 calculate_standard_deviation()
-check_most_active_day()
-check_least_active_day()
+
+main function for this task:
 rack_fitness_and_health()
 
-WHts i struggled the most with was how to on how to print only the last most/ least active day in case of 
-multiple same entires.
 
+Function description:
+- Reads user input for the steps per day
+- Creates a steps list by splitting the user input string 
+- since it was confirmed we are not allowed to use map() i had to iterate trough the steps list
+  and cast each element in the list to an integer and append to a new list of the same elements just
+  of integer type so i cna do all the calculations needed for this task.
+- Error handling checks if the user had exactly 7 days worth of data separated by coma, if not prints an error
+  and returns to main menu if the number of entries is correct proceeds with the rest of the code.
+- Calculates the average
+- Calculates the standard deviation
+- Finds the most and least active day in the weekday
+- Prints all the health tracking stats as requested
+
+*What I struggled the most with was how to on how to print only the last most/ least active day in case of 
+multiple same entires.
 my solution:
 -I create a weekdays list with same order of days as the input of steps list.
 -I initialized the most_active_day_index variable 
