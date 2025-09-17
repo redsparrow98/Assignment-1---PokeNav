@@ -37,8 +37,7 @@ def identify_hashtags():
 
     hashtag_list = []
     for word in words_list:
-        for char in word:
-            if char == "#" and word not in hashtag_list:
+        if word.startswith("#") and word not in hashtag_list:
                 hashtag_list.append(word)
     
     if len(hashtag_list) == 0:
