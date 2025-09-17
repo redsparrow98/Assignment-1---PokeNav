@@ -114,8 +114,8 @@ def get_sum(integer_list):
     and returns a sum
     """
     sum = 0
-    for i in integer_list:
-        sum += i
+    for number in integer_list:
+        sum += number
     return sum
 
 def get_max_value(integer_list):
@@ -124,9 +124,9 @@ def get_max_value(integer_list):
     returns the max_value
     """
     max_value = integer_list[0]
-    for i in integer_list:
-        if i > max_value:
-            max_value = i
+    for number in integer_list:
+        if number > max_value:
+            max_value = number
     return max_value
 
 def get_min_value(integer_list):
@@ -135,9 +135,9 @@ def get_min_value(integer_list):
     returns the min_value
     """
     min_value = integer_list[0]
-    for i in integer_list:
-        if i < min_value:
-            min_value = i
+    for number in integer_list:
+        if number < min_value:
+            min_value = number
     return min_value
 
 def calculate_average(integer_list):
@@ -161,8 +161,8 @@ def calculate_standard_deviation(integer_lis, average):
     returns std_deviation, a single float value representing the population standard deviation.
     """
     squared_diff = []
-    for i in integer_lis:
-        squared_diff.append((i - average) ** 2)
+    for number in integer_lis:
+        squared_diff.append((number - average) ** 2)
     std_deviation = math.sqrt(get_sum(squared_diff) / len(integer_lis))
     return std_deviation
 
@@ -184,9 +184,9 @@ def check_most_active_day(integer_list):
     max_steps = get_max_value(integer_list)
     most_active_day_index = None
 
-    for index in range(len(integer_list)):
-        if integer_list[index] == max_steps:
-            most_active_day_index = index
+    for i in range(len(integer_list)):
+        if integer_list[i] == max_steps:
+            most_active_day_index = i
     most_active_day = weekdays[most_active_day_index]
     return most_active_day
 
@@ -210,9 +210,9 @@ def check_least_active_day(integer_list):
     min_steps = get_min_value(integer_list)
     least_active_day_index = None
 
-    for index in range(len(integer_list)):
-        if integer_list[index] == min_steps:
-            least_active_day_index = index
+    for i in range(len(integer_list)):
+        if integer_list[i] == min_steps:
+            least_active_day_index = i
     least_active_day = weekdays[least_active_day_index]
     return least_active_day
 
