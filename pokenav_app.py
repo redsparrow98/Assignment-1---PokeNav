@@ -79,11 +79,14 @@ def get_pokemon_traits():
     type = input("Type your Pokemon type: ").capitalize()
 
     if type == "Fire":
-        print(f"{name} is a {type}-type Pokemon! It is strong against Grass-type Pokemons and weak against Water-type Pokemons.")
+        print(f"{name} is a {type}-type Pokemon! It is strong against Grass-type"
+                "Pokemons and weak against Water-type Pokemons.")
     elif type == "Water":
-        print(f"{name} is a {type}-type Pokemon! It is strong against Fire-type Pokemons and weak against Grass-type Pokemons.")
+        print(f"{name} is a {type}-type Pokemon! It is strong against Fire-type"
+                "Pokemons and weak against Grass-type Pokemons.")
     elif type == "Grass":
-        print(f"{name} is a {type}-type Pokemon! It is strong against Water-type Pokemons and weak against Fire-type Pokemons.")
+        print(f"{name} is a {type}-type Pokemon! It is strong against Water-type"
+                "Pokemons and weak against Fire-type Pokemons.")
     else:
         print("Error - The Pokemon type provided is not valid. Valid types: Water, Fire, Grass.")
 
@@ -174,17 +177,20 @@ def calculate_standard_deviation(integer_lis, average):
 
 def track_fitness_and_health():
     """
-    The function tracking_fitness_and_health(steps) processes a users weekly step counts and prints fitness statistics.
+    The function tracking_fitness_and_health(steps) processes a users weekly step counts and prints
+    fitness statistics.
     Readds user input representing steps as a string of numbers separated by commas.
     Splits the string and converts each number into an integer so calculations can be done.
-    Checks if the user entered exactly 7 numbers (one for each day of the week). If not, it prints an error message.
+    Checks if the user entered exactly 7 numbers (one for each day of the week). If not, it prints
+    an error message.
     
     If the input is valid:
     It calculates the average daily steps.
     It calculates the standard deviation of the steps.
     It finds the most active day (highest steps).
     It finds the least active day (lowest steps).
-    In case there are ties between the most and least active day, prints the last day in the week to have the same value.
+    In case there are ties between the most and least active day, prints the last day in the week to have the
+    same value.
 
 
     Finally, it prints the average with standard deviation, and shows which day was most active and least active.
