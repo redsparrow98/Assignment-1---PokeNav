@@ -118,6 +118,38 @@ def calculate_average(integer_list):
 
     return average
 
+def get_sum(integer_list):
+    """
+    Gets a sum value of all the integer list of items
+    and returns a sum
+    """
+    sum = 0
+    for i in integer_list:
+        sum += i
+    return sum
+
+def get_max_value(integer_list):
+    """
+    Gets the biggest value from the list of integers
+    returns the max_value
+    """
+    max_value = integer_list[0]
+    for i in integer_list:
+        if i > max_value:
+            max_value = i
+    return max_value
+
+def get_min_value(integer_list):
+    """
+    Gest the smallest value in the list of integers
+    returns the min_value
+    """
+    min_value = integer_list[0]
+    for i in integer_list:
+        if i < min_value:
+            min_value = i
+    return min_value
+
 def calculate_standard_deviation(integer_lis, average):
     """
     calculates the population standard deviation of a list of integers.
@@ -131,7 +163,7 @@ def calculate_standard_deviation(integer_lis, average):
     squared_diff = []
     for i in integer_lis:
         squared_diff.append((i - average) ** 2)
-    std_deviation = math.sqrt(sum(squared_diff) / len(integer_lis))
+    std_deviation = math.sqrt(get_sum(squared_diff) / len(integer_lis))
     return std_deviation
 
 def check_most_active_day(integer_list):
@@ -149,7 +181,7 @@ def check_most_active_day(integer_list):
     """
     weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-    max_steps = max(integer_list)
+    max_steps = get_max_value(integer_list)
     most_active_day_index = -1
     for index in range(len(integer_list)):
         if integer_list[index] == max_steps:
@@ -244,4 +276,3 @@ while option != 1:
         track_fitness_and_health(steps_input)
     else:
         print("Error - Invalid option. Please input a number between 1 and 8.")
-

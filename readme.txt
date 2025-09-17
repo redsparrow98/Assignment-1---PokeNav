@@ -98,6 +98,9 @@ avoid blob code since originally i had the whole function rack_fitness_and_healt
 
 I believe that each function is self contained and can be reused:
 calculate_average()
+get_sum()
+get_max_value()
+get_min_value()
 calculate_standard_deviation()
 check_most_active_day()
 check_least_active_day()
