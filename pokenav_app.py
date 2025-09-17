@@ -189,18 +189,22 @@ def track_fitness_and_health():
 
     Finally, it prints the average with standard deviation, and shows which day was most active and least active.
     """
+    # Read user input and create a list for eas of manipulation
     steps_input = input("Step count per day: ")
-    
-    # Create a list of steps of type integer so we can do calculations.
     steps_list = steps_input.split(",")
-    steps_list_integers = []
-    for x in steps_list:
-        type_cast = int(x)
-        steps_list_integers.append(type_cast)
 
-    if len(steps_list) != 7:
+    # error handling checks
+    if steps_input == "":
+        print(f"Error - Invalid input. The program needs 7 numbers; you typed 0 numbers.")
+    elif len(steps_list) != 7:
         print(f"Error - Invalid input. The program needs 7 numbers; you typed {len(steps_list)} numbers.")
     else:
+        # Create a list of steps of type integer so we can do calculations.
+        steps_list_integers = []
+        for x in steps_list:
+            type_cast = int(x)
+            steps_list_integers.append(type_cast)
+
         # calculate average and standard deviation
         average = calculate_average(steps_list_integers)
         std_steps = calculate_standard_deviation(steps_list_integers, average)
