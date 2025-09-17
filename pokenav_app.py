@@ -108,16 +108,6 @@ def find_zodiac_and_eeveelution():
         print("Element: Air")
         print("Eeveelution: Jolteon")
 
-def calculate_average(integer_list):
-    """
-    Calculates the average of any list of integers
-    and return than average.
-    """
-    list = integer_list
-    average = sum(list) / len(list)
-
-    return average
-
 def get_sum(integer_list):
     """
     Gets a sum value of all the integer list of items
@@ -149,6 +139,16 @@ def get_min_value(integer_list):
         if i < min_value:
             min_value = i
     return min_value
+
+def calculate_average(integer_list):
+    """
+    Calculates the average of any list of integers
+    and return than average.
+    """
+    list = integer_list
+    average = get_sum(list) / len(list)
+
+    return average
 
 def calculate_standard_deviation(integer_lis, average):
     """
