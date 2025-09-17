@@ -182,7 +182,8 @@ def check_most_active_day(integer_list):
     weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
     max_steps = get_max_value(integer_list)
-    most_active_day_index = -1
+    most_active_day_index = None
+
     for index in range(len(integer_list)):
         if integer_list[index] == max_steps:
             most_active_day_index = index
@@ -206,8 +207,9 @@ def check_least_active_day(integer_list):
 
     weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
-    min_steps = min(integer_list)
-    least_active_day_index = -1
+    min_steps = get_min_value(integer_list)
+    least_active_day_index = None
+
     for index in range(len(integer_list)):
         if integer_list[index] == min_steps:
             least_active_day_index = index
