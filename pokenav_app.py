@@ -19,7 +19,7 @@ Welcome to the Main Menu. Choose one of the options below:
     option = int(input("Type your option: "))
     return option
 
-def identify_hashtags(post_str):
+def identify_hashtags():
     """
     Take a post parameter and extract words that contain a hashtag (#),
     and if # is found print the unique hashtags, if no # found print no hashtags found.
@@ -30,7 +30,8 @@ def identify_hashtags(post_str):
         3. Add the word to a hashtag list if not already included.
         4. Print all hashtags found.
     """
-    words_list = post_str.split()
+    post = input("Type your post: ")
+    words_list = post.split()
 
     hashtag_list = []
     for word in words_list:
@@ -62,7 +63,7 @@ def detect_palindrome():
     else:
         print(f"The name ‘{name}’ is not a palindrome.")
 
-def get_pokemon_traits(name, type):
+def get_pokemon_traits():
     """
     Take Pokemon name and type parameters, then print a message showing its strengths and weaknesses against each type.
 
@@ -71,6 +72,8 @@ def get_pokemon_traits(name, type):
         - Water is strong against Fire, weak against Grass.
         - Grass is strong against Water, weak against Fire.
     """
+    name = input("Type your Pokemon name: ")
+    type = input("Type your Pokemon type: ").capitalize()
 
     if type == "Fire":
         print(f"{name} is a {type}-type Pokemon! It is strong against Grass-type Pokemons and weak against Water-type Pokemons.")
@@ -166,6 +169,7 @@ def calculate_standard_deviation(integer_lis, average):
     std_deviation = math.sqrt(get_sum(squared_diff) / len(integer_lis))
     return std_deviation
 
+#
 def check_most_active_day(integer_list):
     """
     -It keeps a list of weekdays that matches each index of the users step input.
@@ -259,16 +263,13 @@ while option != 1:
     if option == 1:
         print("Thank you for playing! See you next time!")
     elif option == 2:
-        post = input("Type your post: ")
-        identify_hashtags(post)
+        identify_hashtags()
     elif option == 3:
         detect_palindrome()
     elif option == 4:
         print("Create an acronym")
     elif option == 5:
-        name = input("Type your Pokemon name: ")
-        type = input("Type your Pokemon type: ").capitalize()
-        get_pokemon_traits(name, type)
+        get_pokemon_traits()
     elif option == 6:
         find_zodiac_and_eeveelution()
     elif option == 7:
