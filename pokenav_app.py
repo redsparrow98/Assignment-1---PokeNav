@@ -64,21 +64,20 @@ def detect_palindrome():
     else:
         print(f"The name ‘{name}’ is not a palindrome.")
 
-def creat_acronym():
+def create_acronym():
     """
     Steps:
 -takes user input for name and shortening factor
 -iterates through the name starting from n'th letter and takes every n'th letter afterwards
 -each selected letter added to a new string
 -eventually the final acronym is displayed in uppercase
-   """
+    """
     name = input("Type your Pokemon Name: ")
     shortening_factor = int (input("Type your Shortening Factor: "))
     acronym = ""
     for i in range (shortening_factor-1, len(name), shortening_factor):
         acronym += name[i]
         print (f"Abbreviated Name: {acronym.upper()}")
-        
 
 def get_pokemon_traits():
     """
@@ -213,8 +212,6 @@ def calculate_bmi():
 
     print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
 
-
-
 def track_fitness_and_health():
     """
     The function tracking_fitness_and_health(steps) processes a users weekly step counts and prints
@@ -291,15 +288,14 @@ while option != 1:
     elif option == 3:
         detect_palindrome()
     elif option == 4:
-        print("Create an acronym")
+        create_acronym()
     elif option == 5:
         get_pokemon_traits()
     elif option == 6:
         find_zodiac_and_eeveelution()
     elif option == 7:
-        print("BMI calculator")
+        calculate_bmi()
     elif option == 8:
         track_fitness_and_health()
     else:
         print("Error - Invalid option. Please input a number between 1 and 8.")
-
