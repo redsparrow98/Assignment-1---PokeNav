@@ -190,6 +190,31 @@ def calculate_standard_deviation(integer_lis, average):
     std_deviation = math.sqrt(get_sum(squared_diff) / len(integer_lis))
     return std_deviation
 
+def calculate_bmi():
+    """
+    Steps:
+    -asks the user to input height and weight
+    -calculates the bmi using the formula
+    -bmi is then compared to the set of ranges to determine Pkemons health category
+    -lastly it prints the calculaued bmi (rounded to 2 decimal values) along with it's health category.
+    """
+    height = float(input("Enter Pokemon's Height in Meter: "))
+    weight= float(input("Enter Pokemon's Weight in kg: "))
+    bmi = weight / (height**2)
+    round_bmi = round(bmi, 2)
+    if bmi < 29:
+        category = "Underweight"
+    elif 29 <= bmi <53:
+        category = "Healthy"
+    elif 53 <= bmi < 85:
+        category = "Overweight"
+    else:
+        category = "Obese"
+
+    print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
+
+
+
 def track_fitness_and_health():
     """
     The function tracking_fitness_and_health(steps) processes a users weekly step counts and prints
