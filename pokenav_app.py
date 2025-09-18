@@ -64,6 +64,22 @@ def detect_palindrome():
     else:
         print(f"The name ‘{name}’ is not a palindrome.")
 
+def creat_acronym():
+    """
+    Steps:
+-takes user input for name and shortening factor
+-iterates through the name starting from n'th letter and takes every n'th letter afterwards
+-each selected letter added to a new string
+-eventually the final acronym is displayed in uppercase
+   """
+    name = input("Type your Pokemon Name: ")
+    shortening_factor = int (input("Type your Shortening Factor: "))
+    acronym = ""
+    for i in range (shortening_factor-1, len(name), shortening_factor):
+        acronym += name[i]
+        print (f"Abbreviated Name: {acronym.upper()}")
+        
+
 def get_pokemon_traits():
     """
     Reads Pokemon name and type user input,
