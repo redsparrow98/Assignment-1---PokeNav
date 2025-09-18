@@ -277,3 +277,4 @@ while option != 1:
         track_fitness_and_health()
     else:
         print("Error - Invalid option. Please input a number between 1 and 8.")
+
