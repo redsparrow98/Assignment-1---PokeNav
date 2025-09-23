@@ -56,8 +56,8 @@ def detect_palindrome():
     name = input("Type your Pokemon name: ")
     reversed_name = ""
 
-    for i in name:
-        reversed_name = i + reversed_name
+    for character in name:
+        reversed_name = character + reversed_name
 
     if name.lower() == reversed_name.lower():
         print(f"The name ‘{name}’ is a palindrome.")
