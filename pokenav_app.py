@@ -12,7 +12,7 @@ Welcome to the Main Menu. Choose one of the options below:
 5. Get Pokemon traits
 6. Match zodiac sign and element
 7. BMI calculator 
-8. Fitness and Health Tracking
+8. Fitness and health tracker
 """
     
     print(menu)
