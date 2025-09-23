@@ -48,6 +48,22 @@ Concepts used:
 Task 3: Detect a Palindrome
 *Harshani
 
+I completed this task by creating a function to detect palindromes.
+
+explanation of the function:
+- reads user input.
+- iterates the user input (for loop) to rearrange each character in a reverse order.
+- if else statements are used to check if the name and the reversed name are a match or not.
+- if it is a match, prints that "the name is palindrome".
+- if not, prints that "the name is not a palindrome".
+
+
+Concepts used:
+-variables      -for loops                  -functions
+-input          -conditionals
+-printing       -string manipulation
+
+
 =========================================================================================================
 
 Task 4: Create an Acronym
@@ -83,6 +99,20 @@ Concepts used:
 
 Task 6: Zodiac Sign and Eeveelution
 *Harshani
+
+I completed this task by creating a function to find zodiac sign and eeveelution.
+
+explanation of the function:
+- reads user input.
+- creates a list of zodiac signs.
+- prints the zodiac sign corresponding to the month.
+- uses if elif statements to find the element and eeveelution corresponding to the zodiac and prints.
+
+concepts used:
+-variables      -functions
+-input          -conditionals
+-printing       -lists
+
 
 =========================================================================================================
 

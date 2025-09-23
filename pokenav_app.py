@@ -60,9 +60,9 @@ def detect_palindrome():
         reversed_name = character + reversed_name
 
     if name.lower() == reversed_name.lower():
-        print(f"The name ‘{name}’ is a palindrome.")
+        print(f"The name '{name}' is a palindrome.")
     else:
-        print(f"The name ‘{name}’ is not a palindrome.")
+        print(f"The name '{name}' is not a palindrome.")
 
 def create_acronym():
     """
