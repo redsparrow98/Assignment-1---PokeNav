@@ -209,12 +209,14 @@ def calculate_bmi():
     Overweight: 53 <= x < 85
     Obese: x >= 85
 
-
     """
     height = float(input("Enter Pokemon's Height in Meter: "))
     weight= float(input("Enter Pokemon's Weight in kg: "))
-    bmi = weight / (height**2)
-    round_bmi = round(bmi, 2)
+    if height < 0 and weight < 0:
+        print ("Error - Height and Weight must be a positive number.")
+    else: 
+        bmi = weight / (height**2)
+        round_bmi = round(bmi, 2)
     if bmi < 29:
         category = "underweight"
     elif 29 <= bmi <53:
@@ -225,7 +227,7 @@ def calculate_bmi():
         category = "obese"
 
     print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
-
+       
 def track_fitness_and_health():
     """
     The function tracking_fitness_and_health(steps) processes a users weekly step counts and prints
