@@ -27,9 +27,12 @@ def identify_hashtags():
 
     Steps:
         1. Read user input for the post
-        1. create a word_list from the post by splitting the string.
-        2. Check each word for the '#' character.
-        3. Add the word to a hashtag list if not already included.
+        2. create a word_list from the post by splitting the string.
+        3.1 Check each word that starts with the '#' character and is longer than 1 character 
+        (to exclude invalid '#' form)
+            3.2. Check if '#' appears in any other places aside from the 1sts position to exclude 
+            invalid '#' form
+            3.3. Add the word to a hashtag list if not already in it included.
         4. Print all hashtags found.
     """
     post = input("Type your post: ")
@@ -37,7 +40,8 @@ def identify_hashtags():
 
     hashtag_list = []
     for word in words_list:
-        if word.startswith("#") and word not in hashtag_list:
+        if word.startswith("#") and len(word) > 1:
+            if "#" not in word[1:] and word not in hashtag_list:
                 hashtag_list.append(word)
     
     if len(hashtag_list) == 0:
