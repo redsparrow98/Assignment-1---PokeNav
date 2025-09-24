@@ -208,8 +208,7 @@ def calculate_bmi():
     Healthy: 29 <= x < 53
     Overweight: 53 <= x < 85
     Obese: x >= 85
-
-    
+ 
     """
     height = float(input("Enter Pokemon's Height in Meter: "))
     weight= float(input("Enter Pokemon's Weight in kg: "))
