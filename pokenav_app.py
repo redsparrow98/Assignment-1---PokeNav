@@ -216,7 +216,7 @@ def calculate_bmi():
         print ("Error - Height must be a positive number.")
     if weight <= 0:
        print ("Error - Weight must be a positive number.") 
-    if height <= 0 and weight <= 0:
+    if height < 0 and weight <= 0:
         print (" Error - Height and Weight both must be a positive number. ")
     else: 
         bmi = weight / (height**2)
