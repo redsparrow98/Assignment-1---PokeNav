@@ -27,9 +27,12 @@ def identify_hashtags():
 
     Steps:
         1. Read user input for the post
-        1. create a word_list from the post by splitting the string.
-        2. Check each word for the '#' character.
-        3. Add the word to a hashtag list if not already included.
+        2. create a word_list from the post by splitting the string.
+        3.1 Check each word that starts with the '#' character and is longer than 1 character 
+        (to exclude invalid '#' form)
+            3.2. Check if '#' appears in any other places aside from the 1sts position to exclude 
+            invalid '#' form
+            3.3. Add the word to a hashtag list if not already in it included.
         4. Print all hashtags found.
     """
     post = input("Type your post: ")
@@ -37,7 +40,8 @@ def identify_hashtags():
 
     hashtag_list = []
     for word in words_list:
-        if word.startswith("#") and word not in hashtag_list:
+        if word.startswith("#") and len(word) > 1:
+            if "#" not in word[1:] and word not in hashtag_list:
                 hashtag_list.append(word)
     
     if len(hashtag_list) == 0:
@@ -75,9 +79,12 @@ def create_acronym():
     name = input("Type your Pokemon Name: ")
     shortening_factor = int (input("Type your Shortening Factor: "))
     acronym = ""
-    for i in range (shortening_factor-1, len(name), shortening_factor):
-        acronym += name[i]
-        print (f"Abbreviated Name: {acronym.upper()}")
+    if shortening_factor > len(name):
+        print("Abbreviated Name: ")
+    else: 
+        for i in range (shortening_factor-1, len(name), shortening_factor):
+            acronym += name[i]
+            print (f"Abbreviated Name: {acronym.upper()}")
 
 def get_pokemon_traits():
     """
@@ -196,21 +203,34 @@ def calculate_bmi():
     -calculates the bmi using the formula
     -bmi is then compared to the set of ranges to determine Pkemons health category
     -lastly it prints the calculaued bmi (rounded to 2 decimal values) along with it's health category.
+
+    Underweight: x < 29
+    Healthy: 29 <= x < 53
+    Overweight: 53 <= x < 85
+    Obese: x >= 85
+
     """
     height = float(input("Enter Pokemon's Height in Meter: "))
     weight= float(input("Enter Pokemon's Weight in kg: "))
-    bmi = weight / (height**2)
-    round_bmi = round(bmi, 2)
-    if bmi < 29:
-        category = "Underweight"
-    elif 29 <= bmi <53:
-        category = "Healthy"
-    elif 53 <= bmi < 85:
-        category = "Overweight"
-    else:
-        category = "Obese"
+    if height < 0 and weight <= 0:
+        print ("error - height and weight must be positive numbers. ")
+    elif height < 0:
+        print ("error - height must be a positive number.")
+    elif weight <= 0:
+        print ("error - weight must be a positive number.") 
+    else: 
+        bmi = weight / (height**2)
+        round_bmi = round(bmi, 2)
+        if bmi < 29:
+            category = "underweight"
+        elif 29 <= bmi <53:
+            category = "healthy"
+        elif 53 <= bmi < 85:
+            category = "overweight"
+        else:
+            category = "obese"
 
-    print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
+        print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
 
 def track_fitness_and_health():
     """
