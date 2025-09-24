@@ -84,7 +84,7 @@ def create_acronym():
     else: 
         for i in range (shortening_factor-1, len(name), shortening_factor):
             acronym += name[i]
-            print (f"Abbreviated name: {acronym.upper()}")
+        print (f"Abbreviated name: {acronym.upper()}")
 
 def get_pokemon_traits():
     """
