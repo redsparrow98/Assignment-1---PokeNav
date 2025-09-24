@@ -215,7 +215,7 @@ def calculate_bmi():
     if height < 0:
         print ("Error - Height must be a positive number.")
     if weight <= 0:
-       print ("Error - Weight must be a positive number.") 
+        print ("Error - Weight must be a positive number.") 
     if height < 0 and weight <= 0:
         print (" Error - Height and Weight both must be a positive number. ")
     else: 
@@ -231,7 +231,7 @@ def calculate_bmi():
         category = "obese"
 
     print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
-       
+
 def track_fitness_and_health():
     """
     The function tracking_fitness_and_health(steps) processes a users weekly step counts and prints
