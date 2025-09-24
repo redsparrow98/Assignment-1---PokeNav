@@ -23,17 +23,7 @@ def identify_hashtags():
     """
     Reads user input for a post.
     Extracts words that contain a hashtag (#),
-    and if # is found print the unique hashtags, if no # found print no hashtags found.
-
-    Steps:
-        1. Read user input for the post
-        2. create a word_list from the post by splitting the string.
-        3.1 Check each word that starts with the '#' character and is longer than 1 character 
-        (to exclude invalid '#' form)
-            3.2. Check if '#' appears in any other places aside from the 1sts position to exclude 
-            invalid '#' form
-            3.3. Add the word to a hashtag list if not already in it included.
-        4. Print all hashtags found.
+    If # is found print the unique hashtags, if no # found prints no hashtags found.
     """
     post = input("Type your post: ")
     words_list = post.split()
@@ -88,8 +78,8 @@ def create_acronym():
 
 def get_pokemon_traits():
     """
-    Reads Pokemon name and type user input,
-    Then prints a message showing its strengths and weaknesses against each type.
+    Reads Pokemon name and type,
+    Then prints a message showing the pokemons strengths and weaknesses against other types.
 
     Rules:
         - Fire is strong against Grass, weak against Water.
@@ -149,8 +139,8 @@ def find_zodiac_and_eeveelution():
 
 def get_sum(integer_list):
     """
-    Gets a sum value of all the integer list of items
-    and returns a sum
+    Gets a sum value of all the elements in the list of integers
+    Returns the sum
     """
     sum = 0
     for number in integer_list:
@@ -159,7 +149,7 @@ def get_sum(integer_list):
 
 def get_max_value(integer_list):
     """
-    Gets the biggest value from the list of integers
+    Gets the biggest value in the list of integers
     returns the max_value
     """
     max_value = integer_list[0]
@@ -192,11 +182,6 @@ def calculate_average(integer_list):
 def calculate_standard_deviation(integer_lis, average):
     """
     calculates the population standard deviation of a list of integers.
-
-    required parameters:
-        integer_list (list of integers) - which will be the data set for calculation
-        average - needs to be the mean of the data set (integer_list)
-
     returns std_deviation, a single float value representing the population standard deviation.
     """
     squared_diff = []
@@ -244,24 +229,13 @@ def calculate_bmi():
 def track_fitness_and_health():
     """
     The function tracking_fitness_and_health(steps) processes a users weekly step counts and prints
-    fitness statistics.
-    Readds user input representing steps as a string of numbers separated by commas.
-    Splits the string and converts each number into an integer so calculations can be done.
-    Checks if the user entered exactly 7 numbers (one for each day of the week). If not, it prints
-    an error message.
+    fitness statistics:
     
-    If the input is valid:
-    It calculates the average daily steps.
-    It calculates the standard deviation of the steps.
-    It finds the most active day (highest steps).
-    It finds the least active day (lowest steps).
-    In case there are ties between the most and least active day, prints the last day in the week to have the
-    same value.
-
-
-    Finally, it prints the average with standard deviation, and shows which day was most active and least active.
+    - average steps per day
+    - standard population deviation
+    - most active day
+    - least active day
     """
-    # Read user input and create a list for eas of manipulation
     steps_input = input("Step count per day: ")
     steps_list = steps_input.split(",")
 
@@ -271,18 +245,16 @@ def track_fitness_and_health():
     elif len(steps_list) != 7:
         print(f"Error - Invalid input. The program needs 7 numbers; you typed {len(steps_list)} numbers.")
     else:
-        # Create a list of steps of type integer so we can do calculations.
         steps_list_integers = []
-        for x in steps_list:
-            type_cast = int(x)
+        for item in steps_list:
+            type_cast = int(item)
             steps_list_integers.append(type_cast)
 
-        # calculate average and standard deviation
         average = calculate_average(steps_list_integers)
         std_steps = calculate_standard_deviation(steps_list_integers, average)
-        
 
-        # find the most active day 
+
+        # find the most and least active day 
         weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
         max_steps = get_max_value(steps_list_integers)
@@ -293,7 +265,6 @@ def track_fitness_and_health():
         most_active_day = weekdays[most_active_day_index]
 
 
-        # find the least active day
         min_steps = get_min_value(steps_list_integers)
         least_active_day_index = None
         for i in range(len(steps_list_integers)):
