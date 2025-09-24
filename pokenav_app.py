@@ -212,25 +212,25 @@ def calculate_bmi():
     """
     height = float(input("Enter Pokemon's Height in Meter: "))
     weight= float(input("Enter Pokemon's Weight in kg: "))
-    if height < 0:
-        print ("Error - Height must be a positive number.")
-    if weight <= 0:
-       print ("Error - Weight must be a positive number.") 
     if height < 0 and weight <= 0:
-        print (" Error - Height and Weight both must be a positive number. ")
+        print ("error - height and weight must be positive numbers. ")
+    elif height < 0:
+        print ("error - height must be a positive number.")
+    elif weight <= 0:
+       print ("error - weight must be a positive number.") 
     else: 
         bmi = weight / (height**2)
         round_bmi = round(bmi, 2)
-    if bmi < 29:
-        category = "underweight"
-    elif 29 <= bmi <53:
-        category = "healthy"
-    elif 53 <= bmi < 85:
-        category = "overweight"
-    else:
-        category = "obese"
+        if bmi < 29:
+            category = "underweight"
+        elif 29 <= bmi <53:
+            category = "healthy"
+        elif 53 <= bmi < 85:
+            category = "overweight"
+        else:
+            category = "obese"
 
-    print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
+        print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
        
 def track_fitness_and_health():
     """
