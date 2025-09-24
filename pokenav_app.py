@@ -199,19 +199,26 @@ def calculate_bmi():
     -calculates the bmi using the formula
     -bmi is then compared to the set of ranges to determine Pkemons health category
     -lastly it prints the calculaued bmi (rounded to 2 decimal values) along with it's health category.
+
+    Underweight: x < 29
+    Healthy: 29 <= x < 53
+    Overweight: 53 <= x < 85
+    Obese: x >= 85
+
+
     """
     height = float(input("Enter Pokemon's Height in Meter: "))
     weight= float(input("Enter Pokemon's Weight in kg: "))
     bmi = weight / (height**2)
     round_bmi = round(bmi, 2)
     if bmi < 29:
-        category = "Underweight"
+        category = "underweight"
     elif 29 <= bmi <53:
-        category = "Healthy"
+        category = "healthy"
     elif 53 <= bmi < 85:
-        category = "Overweight"
+        category = "overweight"
     else:
-        category = "Obese"
+        category = "obese"
 
     print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
 
