@@ -202,7 +202,7 @@ def calculate_bmi():
     -asks the user to input height and weight
     -calculates the bmi using the formula
     -bmi is then compared to the set of ranges to determine Pkemons health category
-    -lastly it prints the calculaued bmi (rounded to 2 decimal values) along with it's health category.
+    -lastly it prints the calculaued bmi (rounded to 2 decimal values) along with it's health category....
 
     Underweight: x < 29
     Healthy: 29 <= x < 53
