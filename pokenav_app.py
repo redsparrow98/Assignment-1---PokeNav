@@ -220,7 +220,6 @@ def calculate_bmi():
         print ("error - weight must be a positive number.") 
     else: 
         bmi = weight / (height**2)
-        round_bmi = round(bmi, 2)
         if bmi < 29:
             category = "underweight"
         elif 29 <= bmi <53:
@@ -230,7 +229,7 @@ def calculate_bmi():
         else:
             category = "obese"
 
-        print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
+        print(f"BMI = {bmi:.2f}. The Pokemon is {category}.")
 
 def track_fitness_and_health():
     """
