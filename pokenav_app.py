@@ -76,15 +76,15 @@ def create_acronym():
 -each selected letter added to a new string
 -eventually the final acronym is displayed in uppercase
     """
-    name = input("Type your Pokemon Name: ")
-    shortening_factor = int (input("Type your Shortening Factor: "))
+    name = input("Type your Pokemon name: ")
+    shortening_factor = int (input("Type your shortening factor: "))
     acronym = ""
     if shortening_factor > len(name):
-        print("Abbreviated Name: ")
+        print("Abbreviated name: ")
     else: 
         for i in range (shortening_factor-1, len(name), shortening_factor):
             acronym += name[i]
-            print (f"Abbreviated Name: {acronym.upper()}")
+            print (f"Abbreviated name: {acronym.upper()}")
 
 def get_pokemon_traits():
     """
@@ -210,8 +210,8 @@ def calculate_bmi():
     Obese: x >= 85
  
     """
-    height = float(input("Enter Pokemon's Height in Meter: "))
-    weight= float(input("Enter Pokemon's Weight in kg: "))
+    height = float(input("Type ypur Pokemon's height in meters: "))
+    weight= float(input("Type your Pokemon's weight in kilograms: "))
     if height < 0 and weight <= 0:
         print ("error - height and weight must be positive numbers. ")
     elif height < 0:
