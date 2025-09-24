@@ -76,15 +76,15 @@ def create_acronym():
 -each selected letter added to a new string
 -eventually the final acronym is displayed in uppercase
     """
-    name = input("Type your Pokemon name: ")
-    shortening_factor = int (input("Type your shortening factor: "))
+    name = input("Type your Pokemon Name: ")
+    shortening_factor = int (input("Type your Shortening Factor: "))
     acronym = ""
     if shortening_factor > len(name):
-        print("Abbreviated name: ")
+        print("Abbreviated Name: ")
     else: 
         for i in range (shortening_factor-1, len(name), shortening_factor):
             acronym += name[i]
-        print (f"Abbreviated name: {acronym.upper()}")
+            print (f"Abbreviated Name: {acronym.upper()}")
 
 def get_pokemon_traits():
     """
@@ -120,23 +120,31 @@ def find_zodiac_and_eeveelution():
     """
     zodiac_sign = ["Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius"]
 
-    birth_month = (int(input("Type your birth month: "))) - 1
+    birth_month = int(input("Type your birth month: "))
 
-    zodiac = (zodiac_sign[birth_month])
-    print(f"Zodiac sign: {zodiac}")
+    # error handling
 
-    if zodiac == "Cancer" or zodiac == "Scorpio" or zodiac == "Pisces":
-        print("Element: Water")
-        print("Eeveelution: Vaporeon")
-    elif zodiac == "Aries" or zodiac == "Leo" or zodiac == "Sagittarius":
-        print("Element: Fire")
-        print("Eeveelution: Flareon")
-    elif zodiac == "Taurus" or zodiac == "Virgo" or zodiac == "Capricorn":
-        print("Element: Earth")
-        print("Eeveelution: Leafeon")
-    elif zodiac == "Gemini" or zodiac == "Libra" or zodiac == "Aquarius":
-        print("Element: Air")
-        print("Eeveelution: Jolteon")
+    if birth_month >= 13 or birth_month <= 0:
+        print("Error - The month index provided is not valid. Choose between 1 and 12.")
+
+    else:
+        birth_month = birth_month - 1
+
+        zodiac = (zodiac_sign[birth_month])
+        print(f"Zodiac sign: {zodiac}")
+
+        if zodiac == "Cancer" or zodiac == "Scorpio" or zodiac == "Pisces":
+            print("Element: Water")
+            print("Eeveelution: Vaporeon")
+        elif zodiac == "Aries" or zodiac == "Leo" or zodiac == "Sagittarius":
+            print("Element: Fire")
+            print("Eeveelution: Flareon")
+        elif zodiac == "Taurus" or zodiac == "Virgo" or zodiac == "Capricorn":
+            print("Element: Earth")
+            print("Eeveelution: Leafeon")
+        elif zodiac == "Gemini" or zodiac == "Libra" or zodiac == "Aquarius":
+            print("Element: Air")
+            print("Eeveelution: Jolteon")
 
 def get_sum(integer_list):
     """
@@ -210,8 +218,8 @@ def calculate_bmi():
     Obese: x >= 85
 
     """
-    height = float(input("Type your Pokemon's height in meters: "))
-    weight= float(input("Type your Pokemon's weight in kilograms: "))
+    height = float(input("Enter Pokemon's Height in Meter: "))
+    weight= float(input("Enter Pokemon's Weight in kg: "))
     if height < 0 and weight <= 0:
         print ("error - height and weight must be positive numbers. ")
     elif height < 0:
@@ -220,6 +228,7 @@ def calculate_bmi():
         print ("error - weight must be a positive number.") 
     else: 
         bmi = weight / (height**2)
+        round_bmi = round(bmi, 2)
         if bmi < 29:
             category = "underweight"
         elif 29 <= bmi <53:
@@ -229,7 +238,7 @@ def calculate_bmi():
         else:
             category = "obese"
 
-        print(f"BMI = {bmi:.2f}. The Pokemon is {category}.")
+        print(f"BMI = {round_bmi:.2f}. The Pokemon is {category}.")
 
 def track_fitness_and_health():
     """
