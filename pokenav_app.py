@@ -75,9 +75,12 @@ def create_acronym():
     name = input("Type your Pokemon Name: ")
     shortening_factor = int (input("Type your Shortening Factor: "))
     acronym = ""
-    for i in range (shortening_factor-1, len(name), shortening_factor):
-        acronym += name[i]
-        print (f"Abbreviated Name: {acronym.upper()}")
+    if shortening_factor > len(name):
+        print("Abbreviated Name: ")
+    else: 
+        for i in range (shortening_factor-1, len(name), shortening_factor):
+            acronym += name[i]
+            print (f"Abbreviated Name: {acronym.upper()}")
 
 def get_pokemon_traits():
     """
