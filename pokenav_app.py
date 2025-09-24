@@ -118,7 +118,8 @@ def find_zodiac_and_eeveelution():
     print the element and eeveelution corresponding to the zodiac.
 
     """
-    zodiac_sign = ["Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius"]
+    zodiac_sign = ["Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini",
+                    "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius"]
 
     birth_month = int(input("Type your birth month: "))
 
