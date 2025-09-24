@@ -1,0 +1,518 @@
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your post: Hashtags found: #hashtag1
+#hashtag2.
+#hashtag2
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your post: Hashtags found: #battle
+#catch
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your post: Hashtags found: #fun
+#difficult
+#funtimes
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your post: Hashtags found: #hashtag4
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your post: Hashtags found: #nice
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your post: Hashtags found: #-
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: The name 'Eevee' is a palindrome.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: The name 'Charizard' is not a palindrome.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: The name 'Ivysaur' is not a palindrome.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: The name 'Electrike' is not a palindrome.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: The name 'Alomomola' is a palindrome.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: Type your shortening factor: Abbreviated name: KAKUNA
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: Type your shortening factor: Abbreviated name: 
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: Type your shortening factor: Abbreviated name: R
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: Type your shortening factor: Abbreviated name: RBMNBE
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: Type your Pokemon type: Squirtle is a Water-type Pokemon! It is strong against Fire-typePokemons and weak against Grass-type Pokemons.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: Type your Pokemon type: Corphish is a Water-type Pokemon! It is strong against Fire-typePokemons and weak against Grass-type Pokemons.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: Type your Pokemon type: Chikorita is a Grass-type Pokemon! It is strong against Water-typePokemons and weak against Fire-type Pokemons.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: Type your Pokemon type: Chimchar is a Fire-type Pokemon! It is strong against Grass-typePokemons and weak against Water-type Pokemons.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: Type your Pokemon type: Fomantis is a Grass-type Pokemon! It is strong against Water-typePokemons and weak against Fire-type Pokemons.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon name: Type your Pokemon type: Growlithe is a Fire-type Pokemon! It is strong against Grass-typePokemons and weak against Water-type Pokemons.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your birth month: 
+Zodiac sign: Capricorn
+Element: Earth
+Eeveelution: Leafeon
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your birth month: 
+Zodiac sign: Aquarius
+Element: Air
+Eeveelution: Jolteon
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your birth month: 
+Zodiac sign: Pisces
+Element: Water
+Eeveelution: Vaporeon
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your birth month: 
+Zodiac sign: Gemini
+Element: Air
+Eeveelution: Jolteon
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your birth month: 
+Zodiac sign: Virgo
+Element: Earth
+Eeveelution: Leafeon
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your birth month: 
+Zodiac sign: Libra
+Element: Air
+Eeveelution: Jolteon
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your birth month: 
+Zodiac sign: Scorpio
+Element: Water
+Eeveelution: Vaporeon
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your birth month: 
+Zodiac sign: Sagittarius
+Element: Fire
+Eeveelution: Flareon
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon's height in meters: Type your Pokemon's weight in kilograms: BMI = 85.22. The Pokemon is obese.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon's height in meters: Type your Pokemon's weight in kilograms: BMI = 1.96. The Pokemon is underweight.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon's height in meters: Type your Pokemon's weight in kilograms: BMI = 0.22. The Pokemon is underweight.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon's height in meters: Type your Pokemon's weight in kilograms: BMI = 70.19. The Pokemon is overweight.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Type your Pokemon's height in meters: Type your Pokemon's weight in kilograms: BMI = 0.00. The Pokemon is underweight.
+
+Welcome to the Main Menu. Choose one of the options below:
+
+    1. Exit
+    2. Identify hashtags
+    3. Detect a palindrome
+    4. Create an acronym
+    5. Get Pokemon traits
+    6. Match zodiac sign and element
+    7. BMI calculator
+    8. Fitness and health tracker  
+
+Type your option: 
+Thank you for playing! See you next time!
