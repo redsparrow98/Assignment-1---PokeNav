@@ -214,9 +214,9 @@ def calculate_bmi():
     weight= float(input("Enter Pokemon's Weight in kg: "))
     if height < 0:
         print ("Error - Height must be a positive number.")
-    if weight < 0:
+    if weight <= 0:
        print ("Error - Weight must be a positive number.") 
-    if height < 0 and weight < 0:
+    if height <= 0 and weight <= 0:
         print (" Error - Height and Weight both must be a positive number. ")
     else: 
         bmi = weight / (height**2)
