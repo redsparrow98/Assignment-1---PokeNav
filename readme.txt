@@ -15,7 +15,7 @@ after each section is finalized we agreed to create a menu_scree() function.
 This makes the whole code more readable and modular which makes it easier to update and change over time
 
 Concepts used:
--variables      -functions
+-variables
 -input
 -printing 
 
@@ -29,13 +29,10 @@ I completed this task by creating a function to detect the # in a post.
 explanation of the function:
 - Reads user post input and creates a words_list by splitting each word in the post.
 - Declares an empty list for storing the hashtags.
-- Uses for loop to iterate trough all the words in the words_list
-- Checks for 2 main conditions first if word starts with # and is longer than 1 character this ensures 
-  that the words contained a # and avoids the invalid single # case
-- If both these are correct it checks another 2 conditions, the # doesn't appear in the word again after the
-  first first appearance which i checked by slicing the word and that the word is already not in the
-  hashtag list, this avoids invalid multiple #s in a word and duplicates in the list.
-- if all conditions are satisfied the word gets added to the hashtag_lis
+- Uses a nested for loop to iterate trough all the words in the words_list and then to iterate trough
+  each character in that word.
+- while iterating trough the character in each word checks if character is a # AND if it does match 
+  check that word is not already in the hashtags_list if both are true the words gets appended to the list.
 - As part of error handling if checks the length of the hashtag_list and if its 0 (meaning empty) it prints
   "No hashtags found."
 - If the list is not empty then it prints the items in the list
@@ -72,19 +69,33 @@ Concepts used:
 Task 4: Create an Acronym
 *Sayara
 
+I created a function that asks the user to enter a Pokemon name and a shortening factor(n). Then it starts with the n'th letter of the name and creates an acronym by combining all the n'th letters. Eventually the final acronym is displayed in uppercase.
+
+Steps:
+-takes user input for name and shortening factor
+-iterates through the name starting from n'th letter and takes every n'th letter afterwards
+-each selected letter added to a new string
+-eventually the final acronym is displayed in uppercase
+
+Concepts used:
+-variables
+-input
+-printing
+-conditionals (if....else)
+-string manipulation 
+
 =========================================================================================================
 
 Task 5: Get Pokémon Traits
 *Nat
 
 Created another function for this module of the program.
-
 Description of the function:
 - The function asks for name of the Pokemon and the type of the pokemon, I decided to capitalize the type
   input due to the assignment specifications stating that this input is case sensitive and i wanted to ensure
   to avoid any errors in case input is not capitalized.
-- Then the function runs a conditional to check for the users type input and based on the user type 
-  show them the weaknesses and strengths against other types of Pokemons
+- Then the function runs a conditional to check for the users type input and based on the user type it prints 
+  output to the user to show them the weaknesses and strengths against other types f Pokemons
 - As part of error handling if the user inputted type doesn't match any of the criteria it prints an error 
   message and returns to main menu.
 
@@ -123,14 +134,30 @@ concepts used:
 Task 7: Implement Body Mass Index (BMI) Based on Height and Weight
 *Sayara
 
+Created another unique function to calculate the BMI.
+
+this time I kinda struggled with rounding the bmi value as this was a requirement and since we were not allowed to use the round function. Initially I was trying to use the round function to calculate the bmi but then I just decided to convert the final result to rounded to 2 decimal values rather than converting the whole calculation by using round function.
+
+explanation of the function:
+-takes user input for height and weight (declared the variables as float since they might be float values as well)
+-checks if the values are valid or not which was essentially a part of the error handling.
+-then if the values are valid then calculates the bmi using the formula.
+-compares the bmi against a set of ranges to determine the health category of the Pokémon.
+- finally prints the bmi with rounded value to 2 decimal places along with the health category.
+-as a part of the error handling if the user inputs any negative number the program shows an error message and returns to main menu.
+
+concepts used:
+-variables                 
+-input         
+-printing 
+-functions 
+-conditionals (if, elif, else)  
 =========================================================================================================
 
 task 8: Fitness and Health Tracking
 *Nat
 
-Functions created because it was specified that we are not allowed to use the built in sum(), min(),
-max(), mean():
-
+Functions created because we are told we are not allowed to use the built in sum(), min(), max(), mean():
 calculate_average()
 get_sum()
 get_max_value()
@@ -143,23 +170,23 @@ rack_fitness_and_health()
 
 Function description:
 - Reads user input for the steps per day
-- Creates a steps list by using split() on the user input. 
+- Creates a steps list by splitting the user input string 
 - since it was confirmed we are not allowed to use map() i had to iterate trough the steps list
   and cast each element in the list to an integer and append to a new list of the same elements just
-  of integer type so that I could do all the calculations needed for this task.
+  of integer type so i cna do all the calculations needed for this task.
 - Error handling checks if the user had exactly 7 days worth of data separated by coma, if not prints an error
   and returns to main menu if the number of entries is correct proceeds with the rest of the code.
-- Calculates the average of given the steps
-- Calculates the standard deviation of given steps
+- Calculates the average
+- Calculates the standard deviation
 - Finds the most and least active day in the weekday
 - Prints all the health tracking stats as requested
 
-*What I struggled the most with was how to print only the last most/ least active day in case of 
+*What I struggled the most with was how to on how to print only the last most/ least active day in case of 
 multiple same entires.
 my solution:
 -I create a weekdays list with same order of days as the input of steps list.
 -I initialized the most_active_day_index variable 
--Then i decided on using the for loop to iterate through the steps list in the range of the amount of items 
+-Then i decided on suing the for loop to iterate through the steps list in the range of the amount of items 
 in the list (6)
 -Each time I found a value equal to the max_steps I updated most_active_day_index to be the iterating index
 -This meant that if there is a same max_steps value at the end of the steps list it will update the
@@ -180,24 +207,15 @@ Concepts used:
 task 9: 
 
 Task 1: Menu error Nat/Harshani ✅
-- we just created an else statement in the while loop for the program running to catch the case if anything
-  else was entered beside the expected (1-8)
 
 Task 2: No hashtags found error Nat ✅
-- As part of error handling it checks the length of the hashtag_list at the end of the function
-  and if its 0 (meaning empty) it prints "No hashtags found." otherwise prints the elements in the list
 
 Task 5: Invalid type Nat ✅
-- As part of error handling if the user inputted type doesn't match any of the 3 expected criteria types it 
-  prints an error message and returns to main menu.
 
-task 6: Invalid month index ✅
+task 6: Invalid month index 
 
-task 7: missing inputs ✅
+task 7: Invalid inputs Sayara ✅
 
 task 8: Invalid input Nat ✅
-- Error handling checks if the user had exactly 7 days worth of data separated by coma before runing 
-  the rest of the function, if input amount is not 7 an error message is printed and returns to main menu 
-  if the number of entries is correct proceeds with the rest of the function.
 
 =========================================================================================================
