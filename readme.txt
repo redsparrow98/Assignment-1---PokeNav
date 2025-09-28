@@ -213,7 +213,7 @@ Task 2: No hashtags found error Nat ✅
 
 Task 5: Invalid type Nat ✅
 
-task 6: Invalid month index 
+task 6: Invalid month index ✅
 
 task 7: Invalid inputs Sayara ✅
 
