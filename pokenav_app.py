@@ -275,27 +275,31 @@ def track_fitness_and_health():
         print(f"Steps Statistics: {average:.2f} + / - {std_steps:.2f} per day.")
         print(f"Most active day: {most_active_day}. Least active day: {least_active_day}.")
 
+def main():
+    option = 0
 
-option = 0
+    while option != 1:
+        option = menu_screen()
 
-while option != 1:
-    option = menu_screen()
+        if option == 1:
+            print("Thank you for playing! See you next time!")
+        elif option == 2:
+            identify_hashtags()
+        elif option == 3:
+            detect_palindrome()
+        elif option == 4:
+            create_acronym()
+        elif option == 5:
+            get_pokemon_traits()
+        elif option == 6:
+            find_zodiac_and_eeveelution()
+        elif option == 7:
+            calculate_bmi()
+        elif option == 8:
+            track_fitness_and_health()
+        else:
+            print("Error - Invalid option. Please input a number between 1 and 8.")
 
-    if option == 1:
-        print("Thank you for playing! See you next time!")
-    elif option == 2:
-        identify_hashtags()
-    elif option == 3:
-        detect_palindrome()
-    elif option == 4:
-        create_acronym()
-    elif option == 5:
-        get_pokemon_traits()
-    elif option == 6:
-        find_zodiac_and_eeveelution()
-    elif option == 7:
-        calculate_bmi()
-    elif option == 8:
-        track_fitness_and_health()
-    else:
-        print("Error - Invalid option. Please input a number between 1 and 8.")
+
+if __name__ == "__main__":
+    main()
