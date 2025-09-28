@@ -48,12 +48,12 @@ Concepts used:
 Task 3: Detect a Palindrome
 *Harshani
 
-I completed this task by creating a function to detect palindromes.
+This task requires to detect palindrome in user inputs(names).
 
-explanation of the function:
-- reads user input.
+I completed this task by creating a function which;
+- reads a user input.
 - iterates the user input (for loop) to rearrange each character in a reverse order.
-- if else statements are used to check if the name and the reversed name are a match or not.
+- if else statements have been used to check if the name and the reversed name are a match or not.
 - if it is a match, prints that "the name is palindrome".
 - if not, prints that "the name is not a palindrome".
 
@@ -121,7 +121,8 @@ explanation of the function:
 - reads user input.
 - creates a list of zodiac signs.
 - prints the zodiac sign corresponding to the month.
-- uses if elif statements to find the element and eeveelution corresponding to the zodiac and prints.
+- uses if elif statements to find the element and eeveelution corresponding to the zodiac and prints the result accordingly.
+- covers the error handling with an if statement. (if the input is equal or less than 0 or greater than 12 and prints an error message.)
 
 concepts used:
 -variables      -functions
