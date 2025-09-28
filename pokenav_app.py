@@ -61,10 +61,10 @@ def detect_palindrome():
 def create_acronym():
     """
     Steps:
--takes user input for name and shortening factor
--iterates through the name starting from n'th letter and takes every n'th letter afterwards
--each selected letter added to a new string
--eventually the final acronym is displayed in uppercase
+    -takes user input for name and shortening factor
+    -iterates through the name starting from n'th letter and takes every n'th letter afterwards
+    -each selected letter added to a new string
+    -eventually the final acronym is displayed in uppercase
     """
     name = input("Type your Pokemon name: ")
     shortening_factor = int (input("Type your shortening factor: "))
@@ -228,8 +228,7 @@ def calculate_bmi():
 
 def track_fitness_and_health():
     """
-    The function tracking_fitness_and_health(steps) processes a users weekly step counts and prints
-    fitness statistics:
+    Processes the users weekly step counts and prints fitness statistics:
     
     - average steps per day
     - standard population deviation
