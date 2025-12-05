@@ -1,6 +1,5 @@
 import math
 
-
 def menu_screen():
     menu = f"""
 Welcome to the Main Menu. Choose one of the options below:
